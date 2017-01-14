@@ -1,0 +1,26 @@
+{
+"name":
+"ats-postiats-extra-npm"
+,
+  "version": "1.0.0-alpha",
+  "description":
+  "For using npm to manage additional ATS-Postiats packages",
+  "main": "N/A",
+  "scripts": {
+    "test": "N/A"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ats-lang/ATS-Postiats-extra-npm.git"
+  },
+  "keywords": [
+    "ATS",
+    "npm"
+  ],
+  "author": "Hongwei Xi <gmhwxi@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ats-lang/ATS-Postiats-extra-npm/issues"
+  },
+  "homepage": "https://github.com/ats-lang/ATS-Postiats-extra-npm#readme"
+}
