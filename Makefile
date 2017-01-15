@@ -65,5 +65,23 @@ $(MAKE) -C node_modules/atsccomp-atscc2erl all \
   && $(MVF) node_modules/atsccomp-atscc2erl/atscc2erl ./bin
 #
 ######
+#
+atscc2scm:: ; \
+$(NPM) install atsccomp-atscc2scm
+#
+atscc2scm:: ; \
+$(MAKE) -C node_modules/atsccomp-atscc2scm all \
+  && $(MVF) node_modules/atsccomp-atscc2scm/atscc2scm ./bin
+#
+######
+#
+atscc2clj:: ; \
+$(NPM) install atsccomp-atscc2clj
+#
+atscc2clj:: ; \
+$(MAKE) -C node_modules/atsccomp-atscc2clj all \
+  && $(MVF) node_modules/atsccomp-atscc2clj/atscc2clj ./bin
+#
+######
 
 ###### end of [Makefile] ######
