@@ -20,6 +20,14 @@ MAKE=make
 all::
 
 ######
+
+ats-extsolve:: ; $(NPM) install $@
+
+######
+
+catsparsemit:: ; $(NPM) install $@
+
+######
 #
 atscc2js:: ; \
 $(NPM) install atsccomp-atscc2js
@@ -82,6 +90,32 @@ atscc2clj:: ; \
 $(MAKE) -C node_modules/atsccomp-atscc2clj all \
   && $(MVF) node_modules/atsccomp-atscc2clj/atscc2clj ./bin
 #
+######
+#
+patsolve_z3:: ; \
+$(NPM) install ats-extsolve-z3
+#
+patsolve_z3:: ; \
+$(MAKE) -C node_modules/ats-extsolve-z3 all \
+  && $(MVF) node_modules/ats-extsolve-z3/patsolve_z3 ./bin
+#
+######
+#
+patsolve_smt2:: ; \
+$(NPM) install ats-extsolve-smt2
+#
+patsolve_smt2:: ; \
+$(MAKE) -C node_modules/ats-extsolve-smt2 all \
+  && $(MVF) node_modules/ats-extsolve-smt2/patsolve_smt2 ./bin
+#
+######
+
+patsopt-nodejs:: ; $(NPM) install $@
+
+######
+
+ats-postiats-include:: ; $(NPM) install $@
+
 ######
 
 ###### end of [Makefile] ######
