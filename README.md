@@ -1,2 +1,4 @@
-# ATS-Postiats-extra-npm
-For using npm to manage additional ATS-Postiats packages
+# ATS-Postiats-npm-utils
+
+For using npm to manage various ATS-Postiats packages for utils.
+A partial mirror of this repository is inside ATS-Postiats/npm-utils
