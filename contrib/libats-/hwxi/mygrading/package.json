@@ -2,7 +2,7 @@
 "name":
 "atscntrb-hx-mygrading"
 ,
-"version": "1.0.0-alpha"
+"version": "1.0.0"
 ,
 "description":
 "This package is for grading BUCS courses..."
@@ -20,7 +20,7 @@
   ]
 ,
   "dependencies": {
-    "atscntrb-hx-cs-parse" : ">=1.0.0"
+    "atscntrb-hx-csv-parse" : ">=1.0.0"
   }
 ,
   "author":

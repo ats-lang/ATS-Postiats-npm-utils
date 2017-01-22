@@ -30,30 +30,15 @@
 //
 (* ****** ****** *)
 //
-(*
-#define
-CSV_parse_targetloc
-"$PATSHOMELOCS/atscntrb-hx-csv-parse"
-*)
-//
-#define
-CSV_parse_targetloc"./../../CSV-parse"
+#include "./../mylib.hats"
 //
 (* ****** ****** *)
 //
-#staload
-"{$CSV_parse}\
-/DATS/csv_parse_line.dats"
-//
-(* ****** ****** *)
-
 #staload "./../SATS/mygrading.sats"
-
-(* ****** ****** *)
-
+//
 #staload
 _(*SBF*) = "libats/DATS/stringbuf.dats"
-
+//
 (* ****** ****** *)
 
 implement

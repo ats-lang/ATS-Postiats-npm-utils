@@ -15,6 +15,8 @@ PATSHOMELOCS=\
 #
 ######
 
+all:: \
+test01
 test01: \
 test01.dats ; \
 $(PATSCC) -O2 \
@@ -23,6 +25,8 @@ cleanall:: ; $(RMF) test01
 
 ######
 
+all:: \
+test02
 test02: \
 test02.dats ; \
 $(PATSCC) -O2 \
@@ -32,6 +36,14 @@ cleanall:: ; $(RMF) test02
 ######
 
 RMF=rm -f
+
+######
+
+testall:: all
+#
+#testall:: regress
+#
+testall:: cleanall
 
 ######
 
