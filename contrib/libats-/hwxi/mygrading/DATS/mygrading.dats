@@ -47,7 +47,12 @@ CSV_parse_targetloc"./../../CSV-parse"
 //
 (* ****** ****** *)
 
-staload "./../SATS/mygrading.sats"
+#staload "./../SATS/mygrading.sats"
+
+(* ****** ****** *)
+
+#staload
+_(*SBF*) = "libats/DATS/stringbuf.dats"
 
 (* ****** ****** *)
 

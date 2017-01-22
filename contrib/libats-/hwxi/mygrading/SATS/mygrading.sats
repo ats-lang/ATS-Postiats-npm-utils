@@ -22,8 +22,13 @@
 // Start time: the first of July, 2016
 //
 (* ****** ****** *)
+//
+#define
+ATS_PACKNAME"ATSCNTRB.HX.mygrading"
+//
+(* ****** ****** *)
 
-staload "libats/ML/SATS/basis.sats"
+#staload "libats/ML/SATS/basis.sats"
 
 (* ****** ****** *)
 //
