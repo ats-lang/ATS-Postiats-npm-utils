@@ -17,15 +17,17 @@ csv_parse_line_nerr
 
 local
 //
-staload
+#staload
 UN = "prelude/SATS/unsafe.sats"
 //
-staload
+#staload
 SBF = "libats/SATS/stringbuf.sats"
 vtypedef stringbuf = $SBF.stringbuf
 //
-staload
+(*
+#staload
 _(*SBF*) = "libats/DATS/stringbuf.dats"
+*)
 //
 extern
 fun{}
