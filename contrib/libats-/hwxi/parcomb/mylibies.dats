@@ -3,11 +3,11 @@
 #define ATS_DYNLOADFLAG 0
 //
 #define
-ATS_PACKNAME "ATSCNTRB.HX.kparcomb"
+ATS_PACKNAME "ATSCNTRB.HX.parcomb"
 //
 (* ****** ****** *)
 //
-local #include"./DATS/kparcomb.dats" in (*nothing*) end
+local #include"./DATS/parcomb.dats" in end
 //
 (* ****** ****** *)
 

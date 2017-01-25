@@ -1,11 +1,11 @@
 {
 "name":
-"atscntrb-hx-kparcomb"
+"atscntrb-hx-parcomb"
 ,
-"version": "1.0.0-beta"
+"version": "1.0.0-alpha"
 ,
 "description":
-"This package is for experimenting with parsing with continuation..."
+"This package is for experimenting with parsing combinators..."
 ,
   "main": "N/A"
 ,
@@ -16,7 +16,7 @@
   "keywords": [
     "ATS",
     "parsing",
-    "continuation"
+    "combinator"
   ]
 ,
   "dependencies": {}
@@ -27,5 +27,5 @@
   "license": "MIT"
 ,
   "note-for-me":
-  "The package is stored at ${PATSHOME}/npm-utils/contrib/libats-hwxi/kparcomb/."
+  "The package is stored at ${PATSHOME}/npm-utils/contrib/libats-hwxi/parcomb/."
 }
