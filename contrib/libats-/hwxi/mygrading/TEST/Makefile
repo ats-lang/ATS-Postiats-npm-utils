@@ -20,7 +20,7 @@ test01
 test01: \
 test01.dats ; \
 $(PATSCC) -O2 \
--D_GNU_SOURCE -DATS_MEMALLOC_LIBC -o $@ $< testlib.dats
+-D_GNU_SOURCE -DATS_MEMALLOC_LIBC -o $@ $<
 cleanall:: ; $(RMF) test01
 
 ######
@@ -30,7 +30,7 @@ test02
 test02: \
 test02.dats ; \
 $(PATSCC) -O2 \
--D_GNU_SOURCE -DATS_MEMALLOC_LIBC -o $@ $< testlib.dats -latslib
+-D_GNU_SOURCE -DATS_MEMALLOC_LIBC -o $@ $< -latslib
 cleanall:: ; $(RMF) test02
 
 ######

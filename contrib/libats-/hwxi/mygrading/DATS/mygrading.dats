@@ -26,28 +26,27 @@
 #include
 "share/atspre_staload.hats"
 #include
-"share/HATS/atspre_staload_libats_ML.hats"
+"share/HATS\
+/atspre_staload_libats_ML.hats"
 //
 (* ****** ****** *)
 //
-#include "./../mylib.hats"
-//
-(* ****** ****** *)
+#include "./../mydepies.hats"
 //
 #staload "./../SATS/mygrading.sats"
-//
-#staload
-_(*SBF*) = "libats/DATS/stringbuf.dats"
 //
 (* ****** ****** *)
 
 implement
+{}(*tmp*)
 csv_parse_line
   (line) = res0 where
 {
 //
 var nerr: int = 0
-val res0 = csv_parse_line_nerr<>(line, nerr)
+val res0 =
+  $CSVPARSE.csv_parse_line_nerr<>(line, nerr)
+//
 val res0 = $UNSAFE.castvwtp0{list0(string)}(res0)
 //
 } (* end of [csv_parse_line] *)

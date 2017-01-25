@@ -14,6 +14,24 @@ csv_parse_line_nerr
 ) : List0_vt(Strptr1)
 //
 (* ****** ****** *)
+//
+extern
+fun{}
+csv_parse_line$comma(): intGt(0)
+extern
+fun{}
+csv_parse_line$dquote(): intGt(0)
+//
+(* ****** ****** *)
+//
+implement
+{}(*tmp*)
+csv_parse_line$comma() = char2int1(',')
+implement
+{}(*tmp*)
+csv_parse_line$dquote() = char2int1('"')
+//
+(* ****** ****** *)
 
 local
 //
@@ -109,9 +127,9 @@ end // end of [char_getinc]
 (* ****** ****** *)
 //
 macdef
-COMMA = char2u2int0(',')
+COMMA = csv_parse_line$comma<>()
 macdef
-DQUOTE = char2u2int0('"')
+DQUOTE = csv_parse_line$dquote<>()
 //
 (* ****** ****** *)
 
@@ -135,6 +153,8 @@ if c1 >= 0
   else (false)
 //
 end // end of [parse_char]
+
+(* ****** ****** *)
 
 local
 //
@@ -208,7 +228,8 @@ c1 != DQUOTE
       else let
         val () = inc_i()
         val () = inc_i()
-        val () = ignoret($SBF.stringbuf_insert_char(sbf, '"'))
+        val c2 = $UN.cast{charNZ}(int2char0(c2))
+        val () = ignoret($SBF.stringbuf_insert_char(sbf, c2))
       in
         parse_item_loop2(sbf, nerr)
       end // end of [else]

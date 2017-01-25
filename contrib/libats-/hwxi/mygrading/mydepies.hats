@@ -13,10 +13,15 @@ HX_CSV_PARSE_targetloc
 //
 in (*in-of-local*)
 //
-#staload "{$HX_CSV_PARSE}/DATS/csv_parse_line.dats"
+#staload
+_(*SBF*) = "libats/DATS/stringbuf.dats"
+//
+#staload
+CSVPARSE =
+"{$HX_CSV_PARSE}/DATS/csv_parse_line.dats"
 //
 end // end of [local]
 //
 (* ****** ****** *)
 
-(* end of [mylib.hats] *)
+(* end of [mydepies.hats] *)

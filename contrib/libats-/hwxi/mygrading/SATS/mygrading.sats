@@ -12,27 +12,33 @@
 (* ****** ****** *)
 
 (*
-** A library for grading BUCS course
+** For grading BUCS course
 *)
 
 (* ****** ****** *)
 //
 // Author: Hongwei Xi
+// Start time: July 1, 2016
 // Authoremail: gmhwxiATgmailDOTcom
-// Start time: the first of July, 2016
 //
 (* ****** ****** *)
 //
 #define
-ATS_PACKNAME"ATSCNTRB.HX.mygrading"
+ATS_PACKNAME
+"ATSCNTRB.HX.mygrading"
 //
 (* ****** ****** *)
 
-#staload "libats/ML/SATS/basis.sats"
+#staload
+"libats/ML/SATS/basis.sats"
+
+(* ****** ****** *)
+
+#include "./../mydepies.hats"
 
 (* ****** ****** *)
 //
-fun
+fun{}
 csv_parse_line(line: string): list0(string)
 //
 (* ****** ****** *)
