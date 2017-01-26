@@ -9,14 +9,15 @@
 
 (* ****** ****** *)
 //
-(*
-#include
-"share/atspre_define.hats"
+#define
+ATS_PACKNAME "ATSCNTRB.HX.weboxy"
+//
+(* ****** ****** *)
+//
 #include
 "share/atspre_staload.hats"
 #include
 "share/HATS/atspre_staload_libats_ML.hats"
-*)
 //
 (* ****** ****** *)
 
