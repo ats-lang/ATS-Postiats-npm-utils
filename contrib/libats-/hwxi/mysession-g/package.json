@@ -1,0 +1,32 @@
+{
+"name":
+"atscntrb-hx-mysession-g"
+,
+"version": "1.0.0-alpha"
+,
+"description":
+"This package is for experimenting with MP session types"
+,
+"main": "N/A"
+,
+"scripts": {}
+,
+"repository": {}
+,
+"keywords": [
+  "ATS",
+  "session",
+  "multiparty",
+  "session-types"
+]
+,
+"dependencies": {}
+,
+"author":
+"Hongwei Xi <gmhwxi@gmail.com>"
+,
+"license": "MIT"
+,
+"note-for-me":
+"The package is stored at ${PATSHOME}/npm-utils/contrib/libats-hwxi/mysession-g/."
+}
