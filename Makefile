@@ -1,3 +1,4 @@
+######
 #
 # A simple Makefile
 #
@@ -101,6 +102,8 @@ $(MAKE) -C node_modules/ats-extsolve-z3 all \
 #
 ######
 #
+patsolve_smt2:: ; \
+$(NPM) install ats-extsolve-smt2
 patsolve_smt2:: ; \
 $(NPM) install ats-extsolve-smt2
 #
