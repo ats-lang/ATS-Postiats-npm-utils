@@ -104,8 +104,6 @@ $(MAKE) -C node_modules/ats-extsolve-z3 all \
 #
 patsolve_smt2:: ; \
 $(NPM) install ats-extsolve-smt2
-patsolve_smt2:: ; \
-$(NPM) install ats-extsolve-smt2
 #
 patsolve_smt2:: ; \
 $(MAKE) -C node_modules/ats-extsolve-smt2 all \
