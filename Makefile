@@ -39,12 +39,12 @@ $(MAKE) -C node_modules/atsccomp-atscc2js all \
 #
 ######
 #
-atscc2py3:: ; \
-$(NPM) install atsccomp-atscc2py3
+atscc2pl:: ; \
+$(NPM) install atsccomp-atscc2pl
 #
-atscc2py3:: ; \
-$(MAKE) -C node_modules/atsccomp-atscc2py3 all \
-  && $(MVF) node_modules/atsccomp-atscc2py3/atscc2py3 ./bin
+atscc2pl:: ; \
+$(MAKE) -C node_modules/atsccomp-atscc2pl all \
+  && $(MVF) node_modules/atsccomp-atscc2pl/atscc2pl ./bin
 #
 ######
 #
@@ -57,12 +57,21 @@ $(MAKE) -C node_modules/atsccomp-atscc2php all \
 #
 ######
 #
-atscc2pl:: ; \
-$(NPM) install atsccomp-atscc2pl
+atscc2py3:: ; \
+$(NPM) install atsccomp-atscc2py3
 #
-atscc2pl:: ; \
-$(MAKE) -C node_modules/atsccomp-atscc2pl all \
-  && $(MVF) node_modules/atsccomp-atscc2pl/atscc2pl ./bin
+atscc2py3:: ; \
+$(MAKE) -C node_modules/atsccomp-atscc2py3 all \
+  && $(MVF) node_modules/atsccomp-atscc2py3/atscc2py3 ./bin
+#
+######
+#
+atscc2r34:: ; \
+$(NPM) install atsccomp-atscc2r34
+#
+atscc2r34:: ; \
+$(MAKE) -C node_modules/atsccomp-atscc2r34 all \
+  && $(MVF) node_modules/atsccomp-atscc2r34/atscc2r34 ./bin
 #
 ######
 #
