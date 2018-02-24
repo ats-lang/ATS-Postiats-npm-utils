@@ -7,9 +7,7 @@
 //
 local
 //
-#define
-HX_MYGRADING_targetloc
-"$PATSHOMELOCS/atscntrb-hx-mygrading"
+#define HX_MYGRADING_targetloc "."
 //
 in (*in-of-local*)
 //
@@ -22,4 +20,4 @@ end // end of [local]
 //
 (* ****** ****** *)
 
-(* end of [mydepies.hats] *)
+(* end of [mylibies.hats] *)

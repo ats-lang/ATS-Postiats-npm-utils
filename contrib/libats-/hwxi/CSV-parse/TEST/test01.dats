@@ -13,10 +13,37 @@
 //
 (* ****** ****** *)
 //
-#include "./../mydepies.hats"
 #include "./../mylibies.hats"
-#include "./../mylibies_link.hats"
 //
+(* ****** ****** *)
+//
+#staload
+_(*SBF*) = "libats/DATS/stringbuf.dats"
+//
+(* ****** ****** *)
+
+local
+#staload
+CSVPARSE = $CSV_PARSE_LINE
+in(*in-of-local*)
+extern
+fun{}
+csv_parse_line(line: string): list0(string)
+implement
+{}(*tmp*)
+csv_parse_line
+  (line) = res0 where
+{
+//
+var nerr: int = 0
+val res0 =
+  $CSVPARSE.csv_parse_line_nerr<>(line, nerr)
+//
+val res0 = $UNSAFE.castvwtp0{list0(string)}(res0)
+//
+} (* end of [csv_parse_line] *)
+end // end of [local]
+
 (* ****** ****** *)
 
 implement

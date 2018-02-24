@@ -1,35 +1,21 @@
 {
-"name":
-"atscntrb-hx-mygrading"
-,
-"version": "1.0.6"
-,
-"description":
-"This package is for grading BUCS courses..."
-,
-"main": "N/A"
-,
-"scripts": {}
-,
-"repository": {
-  "url":
-  "https://github.com/ats-lang/ATS-Postiats-npm-utils/tree/master/contrib/libats-/hwxi/mygrading"
-}
-,
+  "name": "atscntrb-hx-mygrading",
+  "version": "1.0.7",
+  "description": "This package is for grading BUCS courses...",
+  "main": "N/A",
+  "scripts": {},
+  "repository": {
+    "url": "https://github.com/ats-lang/ATS-Postiats-npm-utils/tree/master/contrib/libats-/hwxi/mygrading"
+  },
   "keywords": [
     "ATS",
     "CSV",
     "grading"
-  ]
-,
+  ],
   "dependencies": {
-    "atscntrb-hx-csv-parse" : ">=1.0.0"
-  }
-,
-  "author":
-  "Hongwei Xi <gmhwxi@gmail.com>"
-,
-  "license": "MIT"
-,
+    "atscntrb-hx-csv-parse": ">=1.0.0"
+  },
+  "author": "Hongwei Xi <gmhwxi@gmail.com>",
+  "license": "MIT",
   "note-for-me": "The package is stored at ${PATSHOME}/npm-utils/contrib/libats-hwxi/mygrading/."
 }

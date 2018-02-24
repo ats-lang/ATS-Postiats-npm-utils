@@ -15,8 +15,8 @@
 (* ****** ****** *)
 //
 #include "./../mydepies.hats"
-#staload "./../SATS/mygrading.sats"
-#staload _ = "./../DATS/mygrading.dats"
+#include "./../mylibies.hats"
+#include "./../mylibies_link.hats"
 //
 (* ****** ****** *)
 
