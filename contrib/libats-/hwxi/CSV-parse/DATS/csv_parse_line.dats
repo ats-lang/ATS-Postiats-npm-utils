@@ -182,8 +182,7 @@ parse_item_loop1
   sbf: !stringbuf, nerr: &int >> _
 ) : Strptr1 = let
 //
-val c1 =
-  g1ofg0(char_get())
+val c1 = g1ofg0(char_get())
 //
 in
 //
@@ -195,8 +194,15 @@ if (
 c1 != COMMA
 ) then (
     inc_i();
-    (if c1 > 0 then
-      ignoret($SBF.stringbuf_insert_char(sbf, $UN.cast{charNZ}(c1)))
+    if
+    (c1 = DQUOTE)
+    then nerr := nerr + 1;
+    (
+    if
+    (c1 > 0)
+    then
+    ignoret
+    ($SBF.stringbuf_insert_char(sbf, $UN.cast{charNZ}(c1)))
     ) ; parse_item_loop1(sbf, nerr)
   ) (* end of [then] *)
   else (
@@ -213,8 +219,7 @@ parse_item_loop2
   sbf: !stringbuf, nerr: &int >> _
 ) : Strptr1 = let
 //
-val c1 =
-  g1ofg0(char_get())
+val c1 = g1ofg0(char_get())
 //
 in
 //
@@ -251,7 +256,7 @@ c1 != DQUOTE
       in
         parse_item_loop2(sbf, nerr)
       end // end of [else]
-  end // end of [then]
+  end // end of [else]
 ) (* end of [then] *)
 else let
   val () = nerr := nerr + 1

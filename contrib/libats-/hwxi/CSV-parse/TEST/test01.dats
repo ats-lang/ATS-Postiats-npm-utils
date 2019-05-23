@@ -39,6 +39,8 @@ var nerr: int = 0
 val res0 =
   $CSVPARSE.csv_parse_line_nerr<>(line, nerr)
 //
+val (  ) = println!("nerr = ", nerr)
+//
 val res0 = $UNSAFE.castvwtp0{list0(string)}(res0)
 //
 } (* end of [csv_parse_line] *)
@@ -49,13 +51,12 @@ end // end of [local]
 implement
 main0() = {
 //
+implement
+fprint_list$sep<>(out) = fprint(out, ";")
+//
 val inp = "\
 Total,245,307,536,422,301,487,395,383,307,407,0,584,120,65,325.6428571,555\
 " // end of [val]
-//
-implement
-fprint_list$sep<>
-  (out) = fprint(out, "; ")
 //
 val xs0 = csv_parse_line(inp)
 val ((*void*)) = println! ("xs0 = ", xs0)
