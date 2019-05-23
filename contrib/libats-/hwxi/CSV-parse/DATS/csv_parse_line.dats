@@ -15,6 +15,16 @@ csv_parse_line_nerr
 //
 (* ****** ****** *)
 //
+// HX:
+// For handing line-breaks
+//
+extern
+fun{}
+stream_vt_csv_line_repair
+(lines: stream_vt(string)): stream_vt(string)
+//
+(* ****** ****** *)
+//
 extern
 fun{}
 csv_parse_line$comma(): intGt(0)
@@ -70,6 +80,14 @@ char_getinc(): int
 //
 in (* in-of-local *)
 //
+(*
+extern
+fun{}
+csv_parse_line_nerr
+(
+  line: string, nerr: &int >> _
+) : List0_vt(Strptr1)
+*)
 implement
 {}(*tmp*)
 csv_parse_line_nerr
@@ -337,6 +355,113 @@ val ((*freed*)) = $SBF.stringbuf_free(sbf)
 } (* end of [where] *)
 //
 end // end of [csv_parse_line_nerr]
+
+end // end of [local]
+
+(* ****** ****** *)
+
+local
+
+#staload
+"libats/ML/SATS/string.sats"
+
+in (* in-of-local *)
+(*
+extern
+fun{}
+stream_vt_csv_line_repair
+(lines: stream_vt(string)): stream_vt(string)
+*)
+implement
+{}(*tmp*)
+stream_vt_csv_line_repair
+  (xs) =
+(
+  aux0(xs)
+) where
+{
+//
+macdef
+DQUOTE =
+csv_parse_line$dquote<>()
+//
+fun
+isevn
+(cs: string): bool =
+(
+  ncs % 2 = 0
+) where
+{
+val ncs =
+string_foldleft<int>
+( cs, 0
+, lam(r, c) =>
+  if c != DQUOTE then r else r+1)
+}
+fun
+isodd
+(cs: string): bool =
+(
+  ncs % 2 != 0
+) where
+{
+val ncs =
+string_foldleft<int>
+( cs, 0
+, lam(r, c) =>
+  if c != DQUOTE then r else r+1)
+}
+//
+fun
+aux0
+( xs
+: stream_vt(string)
+) : stream_vt(string) =
+$ldelay
+(
+case+ !xs of
+| ~stream_vt_nil
+   () => stream_vt_nil()
+| ~stream_vt_cons
+   (x0, xs) => !(aux1(x0, xs))
+, ~(xs) // if the stream is freed
+)
+and
+aux1
+( x0: string
+, xs
+: stream_vt(string)
+) : stream_vt(string) =
+$ldelay
+(
+  if isodd(x0)
+    then !(aux2(x0, xs))
+    else stream_vt_cons(x0, aux0(xs))
+  // end of [if]
+, ~(xs) // if the stream is freed
+)
+//
+and
+aux2
+( x0: string
+, xs
+: stream_vt(string)
+) : stream_vt(string) =
+$ldelay
+(
+case+ !xs of
+| ~stream_vt_nil() =>
+   stream_vt_sing(x0) // missing DQUOTE
+| ~stream_vt_cons(x1, xs) =>
+  (
+    if isevn(x1)
+      then !(aux2(x0+x1, xs))
+      else stream_vt_cons(x0+x1, aux0(xs))
+  )
+, ~(xs) // if the stream is freed
+)
+//
+} (* end of [stream_vt_csv_line_repair] *)
 
 end // end of [local]
 
